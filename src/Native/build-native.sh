@@ -53,6 +53,8 @@ initHostDistroRid()
 
 initTargetDistroRid()
 {
+    export __DistroRid="linux-$__BuildArch"
+    return
     if [ $__CrossBuild == 1 ]; then
         if [ "$__BuildOS" == "Linux" ]; then
             if [ ! -e $ROOTFS_DIR/etc/os-release ]; then

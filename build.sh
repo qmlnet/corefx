@@ -38,7 +38,7 @@ if [ "$1" != "" ] && [[ "$1" != -* ]]; then
     fi
 fi
 
-"$__scriptpath/build-native.sh" "$@"
+"$__scriptpath/build-native.sh" "$@" cross
 if [ $? -ne 0 ];then
    exit 1
 fi
